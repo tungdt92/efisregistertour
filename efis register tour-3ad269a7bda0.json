@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "efis-register-to-1547466644518",
+  "private_key_id": "3ad269a7bda099714b23d8856800462bdf440393",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC12mgyfmQApfyU\nODYgSbwzKsVpLCjhSBKostgX+0uovkFXloxcrJ61hKEjKQGIX3f2UAkHkTGIUD9I\nTsoEMm2Dj/HQbw48xhXnKBVlgBgFDpMOkZOT6vNxbpAJMKtEkK6pXaEYFn0j+kHr\nXzbOYijMPfZ5ZChDnF6wi1UuYXLyKQ9FlOk1ttm3ka0tTNmNS+xrTZrmCkz6+p7V\nGHYSdxgrrXZ94nLT74Deesu2QkZoPqLl/0kth9DhxaDfLzPfcZu0CPkRHi9PC2Ka\ne2LH2bWrWyrXLIirRFwJCwq3SLg4FX9NOx4SFerlWaOhWCvHma+K7m4tKqBoAJdQ\nl8S4PSSzAgMBAAECggEAF4tYdDki72aOJg6FC3cgc6t09aHvBQPUzpyhF7HEYOuJ\nADMQpyr+PVgXmLrFZQefO3evQ5iLxi9FkjIJO7Pfs+neD/Ng74Nh8JSi+Io2EemK\nJpe4eK0xqZz77wSrF+x3gJwLsFexCghronKoYN4alB7tm1fZUq+bHtZbR+7799gb\nELjR4G+85fEqkXRapkcKBHWMt7+1fuyBZRl6OdbpftSaRej8X1MYb2cwuiogJs4k\nCRisZXguT9decxuP48Ko2X9uH5Hh/X4xLkX70gf6XnBd/QfsyUb3OCYv1xypSCxb\n0L0AyEpzApJQcA93K1UAFP2tBZqFt1xaVhOr9QGxCQKBgQDmkeTeCBa7euETnK+9\nSvBZu3kKAja/RfUVxKzlRXN1h2irQN0nyTbq1OC12WyUM/krPAEvXyuEhAjvPzaw\nrKhTEnl7x7PEMpFmB4SzRMJzi1tFirYCFM0LLFFOt/bDY42R0qvRQgMKUw3wKYX5\nZXQD2BDKsKWdw0LzkDkgp3+ofwKBgQDJ6QDLBvVAEXux5OIjZAH04MfUGgfVEoVr\nkaVc/OQoL5CUfi6Wq8JWqeGGsOkOaJQwJuDw3CGXpFEBUm5j5sTrszO4kpR1sJwu\nGcMe5w2Xb4m7zTwmjDcoVthT9YeWnItthWWHH870F2ZfMIABHtSt9jbp9Qkt6X+G\n5SXT/IlJzQKBgBx1W3NQOkYPp6I9D6/khP/+VLU4irtXDiYOrWxrAxI5kWC509Iq\nUr3vYoDvgihUtedxM5A+RefISDYHbl+mH+yI9jeh8X1A5JNcUDO0Q+/w/mX59fcR\nzDEZ2jtGF44MRpf+Ebj1Vdy7XZgL9/5NWGF1FLV/0iFDzYq0fWibY/VPAoGBAIlO\nwxNOsAnZ2dyoYoDeydXV5w7+hMUJy2HTsjkCYcZSUmgpR1V/iLGW5Z/LPzJlPCFi\nzyX9DXsqa0wS2q9liBUh0NJ8HCnM6OkQ6/hf+IY7e9cTQwyT3g64wHSYTJTH8KmS\nRfEWWI72OtARE3uvk8KZ5c5ErPFkES2TN55p5pMhAoGAOw+K72SheM4AYKjjmU3C\n4NFU0lUwiJyW+XyI3lK9cPHTpcM1WgOVEGSXmdISklMF9RuVLk5ng8NUrBo58xwz\nkJkRFLBJtytt/VICUqU8bZ/QZqbaA0P36x6p+sZ0CY5hCsfjkj8bpForxsl7eOXV\nmp4uLXGJVE1PxaLap6oRMTo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "tungservice@efis-register-to-1547466644518.iam.gserviceaccount.com",
+  "client_id": "101619645540399444690",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tungservice%40efis-register-to-1547466644518.iam.gserviceaccount.com"
+}
