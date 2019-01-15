@@ -2,8 +2,10 @@
 session_start();
 require '../utils.php';
 
-precheckRegisterUrl();
-precheckMemberOfGroup();
+if(precheckRegisterUrl()==false || precheckMemberOfGroup()==false){
+    session_destroy();
+    exit;
+}
 
 ?>
 <html>
@@ -26,7 +28,7 @@ precheckMemberOfGroup();
                 <div class="image-holder">
                     <img src="images/registration-form-1.jpg" alt="">
                 </div>
-                <form action="">
+                <form action="../toursaving.php"  method="post">
                     <h3>Chào bạn <?php echo($_SESSION['user_name']);?></h3>
                     <h3>Đăng ký nhận tour</h3>
                     <div class="form-wrapper">
@@ -93,7 +95,10 @@ precheckMemberOfGroup();
                         </select>
                     </div>
                     <div class="form-wrapper">
-                        <input type="text" name="vihicle" placeholder="Phương tiện di chuyển" class="form-control">
+                        <input type="text" name="phonenum" placeholder="Số điện thoại" class="form-control">
+                    </div>
+                    <div class="form-wrapper">
+                        <input type="text" name="vehicle" placeholder="Phương tiện di chuyển" class="form-control">
                     </div>
                     <button type="submit"> Đăng ký
                         <i class="zmdi zmdi-arrow-right"></i>
