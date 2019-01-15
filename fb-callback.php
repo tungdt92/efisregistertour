@@ -6,7 +6,10 @@ require_once __DIR__ . '/vendor/autoload.php';
 require './constants.php';
 require './utils.php';
 
-precheckRegisterUrl();
+if(precheckRegisterUrl()==false){
+    session_destroy();
+    exit;
+}
 
 $fb = new Facebook\Facebook([
     'app_id' => APPID, // Replace {app-id} with your app id

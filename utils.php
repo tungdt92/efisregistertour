@@ -8,15 +8,15 @@ function redirect($url, $statusCode = 303) {
 function precheckRegisterUrl(){
     if(empty($_SESSION['store_sheet'])){
         echo 'URL  không  đúng';
-        session_destroy();
-        exit;
+        return false;
     }
+    return true;
 }
 
 function precheckMemberOfGroup(){
     if (empty($_SESSION['is_member']) || $_SESSION['is_member'] == false){
         echo  'Bạn  không  phải  là  thành  viên  CLB';
-        session_destroy();
-        exit;
+        return false;
     }
+    return true;
 }
