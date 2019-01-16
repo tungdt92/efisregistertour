@@ -23,10 +23,10 @@ if(precheckRegisterUrl()==false || precheckMemberOfGroup()==false){
 
     <body>
 
-        <div class="wrapper" style="background-image: url('images/bg-registration-form-1.jpg');">
+        <div class="wrapper" style="background-image: url('images/background_1.jpg');">
             <div class="inner">
                 <div class="image-holder">
-                    <img src="images/registration-form-1.jpg" alt="">
+                    <img src="images/register_2.jpg" alt="">
                 </div>
                 <form action="../toursaving.php"  method="post">
                     <h3>Chào bạn <?php echo($_SESSION['user_name']);?></h3>
