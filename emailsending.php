@@ -1,4 +1,5 @@
 <?php
+
 //if (php_sapi_name() != 'cli') {
 //    throw new Exception('This application must be run on the command line.');
 //}
@@ -10,11 +11,12 @@ require './constants.php';
 require './utils.php';
 
 
-if(precheckMailBody() == false){
+if (precheckMailBody() == false) {
     echo 'URL không đúng';
     session_destroy();
     exit;
 }
+
 /**
  * Returns an authorized API client.
  * @return Google_Client the authorized client object
@@ -68,10 +70,10 @@ function getClient() {
 }
 
 function sendEmail($service) {
-    
+
     try {
-        $strSubject = "Đăng  ký ".$_SESSION['store_sheet'];
-        $strRawMessage = "From: He thong dang ky tour online<hellotour2019@gmail.com>\r\n";
+        $strSubject = "Đăng  ký " . $_SESSION['store_sheet'];
+        $strRawMessage = "From: He thong dang ky tour<hellotour2019@gmail.com>\r\n";
         $strRawMessage .= "To: Thuy<efistourregister@gmail.com>\r\n";
 //        $strRawMessage .= "CC: Bar<bar@gmail.com>\r\n";
         $strRawMessage .= "Subject: =?utf-8?B?" . base64_encode($strSubject) . "?=\r\n";
@@ -87,6 +89,7 @@ function sendEmail($service) {
         $service->users_messages->send("me", $msg);
     } catch (Exception $e) {
         print "An error occurred: " . $e->getMessage();
+        exit;
     }
 }
 
@@ -94,6 +97,10 @@ function sendEmail($service) {
 $client = getClient();
 $service = new Google_Service_Gmail($client);
 sendEmail($service);
-echo 'Dang ky tour thanh cong';
+
+echo ("<SCRIPT LANGUAGE='JavaScript'>
+    window.confirm('Đăng ký thành công, xem danh sách đăng ký tại google sheet')
+    window.location.href='https://docs.google.com/spreadsheets/d/1jSY-Qfq18ynu_IYUgGSDNJe4NbgmfRcOBU0vb_3VxWA/edit?usp=sharing';
+    </SCRIPT>");
 
 session_destroy();

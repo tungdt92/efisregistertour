@@ -120,18 +120,16 @@ if (checkSheetExist($service, $spreadsheetId, $sheetname) == true) {
     appendNewRow($service, $spreadsheetId, $sheetname, $record);
 }
 
-$messageBody = 'Ho va ten: ' . $array['name'] . '\r\n';
-$messageBody .= 'Lop : ' . $array['class'] . '\r\n';
-$messageBody .= 'So tour : ' . $array['numtour'] . '\r\n';
-$messageBody .= 'Lop : ' . $array['role'] . '\r\n';
-$messageBody .= 'Tu : ' . $array['starttime'] . ' ';
-$messageBody .= 'Den : ' . $array['endtime'] . '\r\n';
-$messageBody .= 'So dien thoai : ' . $array['phonenum'] . '\r\n';
-$messageBody .= 'Phuong tien : ' . $array['vehicle'] . '\r\n';
-$messageBody .= 'FBook : ' . $array['fbname'] . '\r\n';
-$messageBody .= 'Dia chi FB : ' . $array['fburl'] . '\r\n';
-$messageBody .= 'Lop : ' . $array['class'] . '\r\n';
-$messageBody .= 'Lop : ' . $array['class'] . '\r\n';
+$messageBody = '<b>Họ và tên:</b> ' . $record['name'] . '<br>';
+$messageBody .= '<b>Lớp :</b> ' . $record['class'] . '<br>';
+$messageBody .= '<b>Số tour :</b> ' . $record['numtour'] . '<br>';
+$messageBody .= '<b>Vai trò :</b> ' . $record['role'] . '<br>';
+$messageBody .= '<b>Từ :</b> ' . $record['starttime'] . ' ';
+$messageBody .= '<b>Đến :</b> ' . $record['endtime'] . '<br>';
+$messageBody .= '<b>Điện thoại :</b> ' . $record['phonenum'] . '<br>';
+$messageBody .= '<b>Phương tiện :</b> ' . $record['vehicle'] . '<br>';
+$messageBody .= '<b>Facebook :</b> ' . $record['fbname'] . '<br>';
+$messageBody .= '<b>Địa chỉ FB :</b> ' . $record['fburl'] . '<br>';
 $_SESSION['messagebodyemail'] = $messageBody;
 
 redirect('./emailsending.php');
