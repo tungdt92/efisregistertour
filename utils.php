@@ -20,3 +20,11 @@ function precheckMemberOfGroup(){
     }
     return true;
 }
+
+function precheckMailBody(){
+    if(empty($_SESSION['messagebodyemail']))
+    {
+        return false;
+    }
+    return true;
+}

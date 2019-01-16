@@ -3,7 +3,7 @@
 //if (php_sapi_name() != 'cli') {
 //    throw new Exception('This application must be run on the command line.');
 //}
-
+ob_start();
 session_start();
 
 require __DIR__ . '/vendor/autoload.php';
@@ -17,7 +17,7 @@ if (precheckRegisterUrl() == false || precheckMemberOfGroup() == false) {
 
 function myArrayContainsWord(array $myArray, $word) {
     foreach ($myArray as $element) {
-        printf ("element %s\n", $element->title);
+        printf("element %s\n", $element->title);
         if ($element->properties->title == $word) {
             return true;
         }
@@ -30,10 +30,10 @@ function checkSheetExist($service, $spreadsheetId, $sheetname) {
     $sheets = $spreadSheet->getSheets();
 
     if (myArrayContainsWord($sheets, $sheetname)) {
-        printf ("sheet found\n");
+        printf("sheet found\n");
         return true;
     }
-    printf ("sheet not found\n");
+    printf("sheet not found\n");
     return false;
 }
 
@@ -72,7 +72,7 @@ function addNewSheet($service, $spreadsheetId, $sheetname) {
 function appendNewRow($service, $spreadsheetId, $sheetname, $array) {
     $range = $sheetname . '!A1:J';
     $values = [
-        [$array['name'], $array['class'], $array['numtour'], $array['role'], $array['starttime'], $array['endtime'], $array['phonenum'], $array['vehicle'],$array['fbname'], $array['fburl']],
+        [$array['name'], $array['class'], $array['numtour'], $array['role'], $array['starttime'], $array['endtime'], $array['phonenum'], $array['vehicle'], $array['fbname'], $array['fburl']],
     ];
     $requestBody = new Google_Service_Sheets_ValueRange([
         'values' => $values
@@ -120,6 +120,21 @@ if (checkSheetExist($service, $spreadsheetId, $sheetname) == true) {
     appendNewRow($service, $spreadsheetId, $sheetname, $record);
 }
 
-exit;
+$messageBody = 'Ho va ten: ' . $array['name'] . '\r\n';
+$messageBody .= 'Lop : ' . $array['class'] . '\r\n';
+$messageBody .= 'So tour : ' . $array['numtour'] . '\r\n';
+$messageBody .= 'Lop : ' . $array['role'] . '\r\n';
+$messageBody .= 'Tu : ' . $array['starttime'] . ' ';
+$messageBody .= 'Den : ' . $array['endtime'] . '\r\n';
+$messageBody .= 'So dien thoai : ' . $array['phonenum'] . '\r\n';
+$messageBody .= 'Phuong tien : ' . $array['vehicle'] . '\r\n';
+$messageBody .= 'FBook : ' . $array['fbname'] . '\r\n';
+$messageBody .= 'Dia chi FB : ' . $array['fburl'] . '\r\n';
+$messageBody .= 'Lop : ' . $array['class'] . '\r\n';
+$messageBody .= 'Lop : ' . $array['class'] . '\r\n';
+$_SESSION['messagebodyemail'] = $messageBody;
 
+redirect('./emailsending.php');
+
+exit;
 
